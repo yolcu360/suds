@@ -809,8 +809,6 @@ class Factory:
         return (children, imports, attributes, elements, types, groups, agrps)
 
     
-
-
 #######################################################
 # Static Import Bindings :-(
 #######################################################
@@ -819,7 +817,7 @@ Import.bind(
     'suds://schemas.xmlsoap.org/soap/encoding/')
 Import.bind(
     'http://www.w3.org/XML/1998/namespace',
-    'http://www.w3.org/2001/xml.xsd')
+    'https://static.yolcu360.com/xml/xml.xsd')
 Import.bind(
     'http://www.w3.org/2001/XMLSchema',
-    'http://www.w3.org/2001/XMLSchema.xsd')
+    'https://static.yolcu360.com/xml/XMLSchema.xsd')
