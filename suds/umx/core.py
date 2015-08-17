@@ -128,7 +128,14 @@ class Core:
         key = name
         key = '_%s' % reserved.get(key, key)
         setattr(content.data, key, value)
-            
+
+    @staticmethod
+    def _unicode_to_str(key):
+        if not key:
+            return key
+        key = key.replace(u'\u0131', 'i')
+        return key.encode('ASCII')
+
     def append_children(self, content):
         """
         Append child nodes into L{Content.data}
@@ -139,6 +146,7 @@ class Core:
             cont = Content(child)
             cval = self.append(cont)
             key = reserved.get(child.name, child.name)
+            key = self._unicode_to_str(key)
             if key in content.data:
                 v = getattr(content.data, key)
                 if isinstance(v, list):

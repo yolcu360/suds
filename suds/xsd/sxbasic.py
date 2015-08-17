@@ -817,7 +817,7 @@ Import.bind(
     'suds://schemas.xmlsoap.org/soap/encoding/')
 Import.bind(
     'http://www.w3.org/XML/1998/namespace',
-    'https://static.yolcu360.com/xml/xml.xsd')
+    'http://static.yolcu360.com/xml/xml.xsd')
 Import.bind(
     'http://www.w3.org/2001/XMLSchema',
-    'https://static.yolcu360.com/xml/XMLSchema.xsd')
+    'http://static.yolcu360.com/xml/XMLSchema.xsd')
